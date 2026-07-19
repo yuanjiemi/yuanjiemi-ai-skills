@@ -7,7 +7,7 @@
 这里收录我在真实内容运营、个人品牌和一人公司场景中验证过的 Agent Skills。<br>
 先安装一个小 Skill 跑通，再慢慢升级成自己的 AI 工作系统。
 
-[🎁 免费领取完整 AI 系统搭建指南](https://learn.yuanjiemi.com/template) · [⬇️ 下载最新通用 Skill 包](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.1/wechat-article-skill-v1.0.1.zip)
+[🎁 免费领取完整 AI 系统搭建指南](https://learn.yuanjiemi.com/template) · [⬇️ 下载最新通用 Skill 包](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.2/wechat-article-skill-v1.0.2.zip)
 
 </div>
 
@@ -17,7 +17,7 @@
 
 | Skill | 它能帮你做什么 | 是否依赖 n8n | 状态 |
 |---|---|---|---|
-| [根据视频脚本生成公众号文案 Skill](skills/wechat-article/) | 先选 CTA，再生成标题、正文和 CTA，审核后生成排版预览 | 否 | v1.0.1 已发布 |
+| [根据视频脚本生成公众号文案 Skill](skills/wechat-article/) | 先选 CTA，再生成标题、正文和 CTA，审核后生成排版预览 | 否 | v1.0.2 已发布 |
 
 每个 Skill 都以独立目录保存，核心入口是目录中的 `SKILL.md`。安装时必须保留完整文件夹，不能只复制 `SKILL.md`，否则写作和排版标准会丢失。
 
@@ -48,13 +48,13 @@
 - 自然语言调用：`把这个脚本改成公众号文章：链接`
 
 > [!NOTE]
-> 公开安装包不会携带元子的私人 CTA、二维码或账号配置。首次使用时，请提供自己的 CTA 文案或文档链接；也可以回复“本次不加 CTA”。
+> 公开安装包自带元子的“AI 提效模板库”默认 CTA 文案。你也可以提供自己的 CTA 文案或文档链接，或者回复“本次不加 CTA”。安装包不包含公众号 AppID、Secret、Webhook、飞书表格 ID 等账号配置或密钥。
 
 ## 📦 安装
 
 ### 通用安装包
 
-[下载最新版 `wechat-article-skill-v1.0.1.zip`](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.1/wechat-article-skill-v1.0.1.zip)
+[下载最新版 `wechat-article-skill-v1.0.2.zip`](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.2/wechat-article-skill-v1.0.2.zip)
 
 这是完整的通用 Skill 包：可以上传到 WorkBuddy，也可以解压后安装到 Claude Code、OpenClaw 或其他支持 `SKILL.md` 的智能体。
 
