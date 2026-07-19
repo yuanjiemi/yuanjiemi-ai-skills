@@ -45,12 +45,13 @@
 
 ```json
 {
+  "stage": "title_selection | draft | formatted",
   "mode": "video_companion | full_article | revision",
   "title_options": ["标题1", "标题2", "标题3", "标题4", "标题5"],
   "selected_title": "推荐或固定标题",
   "digest": "60–120字摘要",
   "content_markdown": "完整正文；视频承接模式包含视频插入位",
-  "cta": "用户提供的固定CTA；仅在自动化或用户明确要求后续追加时使用占位",
+  "cta": "当前用户的默认CTA或用户本次提供的CTA；仅在明确后续追加时使用占位",
   "emphasis": ["建议加粗或标红的关键词"],
   "needs_confirmation": []
 }
