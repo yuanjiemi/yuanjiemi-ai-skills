@@ -147,7 +147,7 @@ https://calendly.com/lid442655/30min
 
 公开 CTA 图片：
 
-https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.4/yuanzi-ai-template-library-cta.png
+https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.5/yuanzi-ai-template-library-cta.png
 
 排版预览直接引用这张公开图片；如果环境无法访问图片，保留图片链接和 `[插入元子的“扫码领取模板库”公开 CTA 图片]`，不要因此停止写稿，也不要伪造二维码。
 

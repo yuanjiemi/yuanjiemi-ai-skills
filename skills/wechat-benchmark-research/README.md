@@ -54,7 +54,62 @@
 https://github.com/yuanjiemi/yuanjiemi-ai-skills/tree/main/skills/wechat-benchmark-research
 ```
 
-其他支持 `SKILL.md` 的智能体，可以下载通用 ZIP，并把完整的 `wechat-benchmark-research` 文件夹安装到其 Skills 目录。不能只复制 `SKILL.md`，否则配置脚本和 Excel 模板会缺失。
+### Claude Code
+
+下载并解压通用 ZIP，把完整文件夹放到：
+
+```text
+# 个人全局安装
+~/.claude/skills/wechat-benchmark-research/
+
+# 当前项目安装
+.claude/skills/wechat-benchmark-research/
+```
+
+重启 Claude Code 后，可以说：`采集这个公众号最新3篇并收进对标研究库`。
+
+### WorkBuddy
+
+1. 下载上面的通用 ZIP。
+2. 打开“技能”页面，选择“添加技能”→“上传技能”。
+3. 上传 ZIP 并启用“公众号对标文章采集与分析”。
+4. 新建任务测试；不配置 Key 时可先用单篇免费模式。
+
+### OpenClaw（小龙虾）
+
+下面整段命令要粘贴到运行 OpenClaw Gateway 的电脑或服务器的**系统终端 Terminal**，不要发送到小龙虾聊天框：
+
+```bash
+cd "$HOME"
+if [ -d "$HOME/yuanjiemi-ai-skills/.git" ]; then
+  git -C "$HOME/yuanjiemi-ai-skills" pull
+else
+  git clone https://github.com/yuanjiemi/yuanjiemi-ai-skills.git "$HOME/yuanjiemi-ai-skills"
+fi
+openclaw skills install "$HOME/yuanjiemi-ai-skills/skills/wechat-benchmark-research" --as wechat-benchmark-research --global --force
+```
+
+安装后确认文件存在：
+
+```text
+~/.openclaw/skills/wechat-benchmark-research/SKILL.md
+```
+
+如果命令安装不可用，可以下载通用 ZIP，解压后把完整的 `wechat-benchmark-research` 文件夹放到 `~/.openclaw/skills/`。不能只复制 `SKILL.md`，否则配置脚本和 Excel 模板会缺失。完成后重启 OpenClaw Gateway，并新开会话。
+
+使用时直接在小龙虾聊天框发送：
+
+```text
+# 不需要 API Key
+拆解这篇公众号文章并收进对标研究库：文章正文、截图或链接
+
+# 需要用户自己的世界树 API Key
+采集“公众号名称”最新3篇文章并收进对标研究库
+```
+
+第一次采集新账号时，再补充该账号任意一篇公众号文章链接。配置文件和最终 Excel 都生成在运行 Gateway 的那台电脑或服务器上；如果 Gateway 在远程服务器，需从服务器取回 Excel。
+
+其他支持 `SKILL.md` 的智能体，同样可以下载通用 ZIP，并把完整文件夹安装到其 Skills 目录。
 
 ## 账号采集：申请自己的世界树 API Key
 
@@ -76,3 +131,35 @@ https://github.com/yuanjiemi/yuanjiemi-ai-skills/tree/main/skills/wechat-benchma
 - 不登录微信公众号后台，不自动发布文章。
 - 不自动写入飞书或 Notion；生成的 Excel 可以手动导入。
 - 世界树是第三方服务，额度、价格和接口可用性由服务方决定。
+
+---
+
+## 🔹更多模版库
+
+这个资料库是我持续更新的 AI 系统实战手册。它不是一次性看完的东西——你可以在不同阶段回来，找到适合自己的那一层。
+
+➡️ [免费领取《从工具焦虑到系统自由：AI 系统搭建指南》](https://learn.yuanjiemi.com/template)
+
+里面会持续更新：
+
+- 真实场景中验证过的 Agent Skills
+- n8n 工作流与配置教程
+- 视频配套资料和可下载附件
+- AI 系统搭建案例、清单和复盘方法
+
+## 🔹关于元子
+
+我在世界 500 强做了 7 年财务分析和业务控制，读完复旦 FMBA，也拿了 ACCA、CMA 和 PMP 三张证书。
+
+以前我看生意，习惯先看目标、流程、成本、结果和 ROI。现在我看 AI 工具，用的也是同一套方法：它解决什么问题？能省多少时间和成本？值不值得进入一个固定工作流长期复用？
+
+## 🔹联系元子
+
+![联系元子：微信、Line与公众号](../../assets/contact-yuanzi.png)
+
+- 全平台：`@YUAN元解密`
+- [YouTube](https://www.youtube.com/@yuanzixuejie)
+- [B站](https://space.bilibili.com/44402512)
+- [Line](https://line.me/R/ti/p/@958nmzlj?oat_content=url)
+- [添加元子微信](https://hi.yuanjiemi.com/yuan)
+- 视频号、公众号：搜索「YUAN元的进阶笔记」

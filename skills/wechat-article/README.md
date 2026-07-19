@@ -86,6 +86,10 @@ openclaw skills install "$HOME/yuanjiemi-ai-skills/skills/wechat-article" --as w
 
 如果命令安装不可用，也可以解压通用 ZIP，把完整文件夹放到 `~/.openclaw/skills/wechat-article/`，确认其中直接包含 `SKILL.md`，再新开会话。
 
+### 其他智能体
+
+只要支持 Agent Skills / `SKILL.md`，就可以把完整文件夹安装到它规定的 Skills 目录。普通网页聊天机器人如果不支持 Skills，只能把 `SKILL.md` 作为项目指令，不能真正安装。
+
 ## 默认 CTA 与安全边界
 
 公开安装包自带元子的“AI 提效模板库”默认 CTA 文案和公开领取图片。用户也可以提供自己的 CTA，或回复“本次不加 CTA”。
@@ -100,3 +104,35 @@ openclaw skills install "$HOME/yuanjiemi-ai-skills/skills/wechat-article" --as w
 - 排版预览保留已经审核的标题、正文和段落边界。
 - 默认 CTA 固定扫码提示、模板库名称和预约文字的强调样式。
 - 默认领取文案统一为“添加元子微信”。
+
+---
+
+## 🔹更多模版库
+
+这个资料库是我持续更新的 AI 系统实战手册。它不是一次性看完的东西——你可以在不同阶段回来，找到适合自己的那一层。
+
+➡️ [免费领取《从工具焦虑到系统自由：AI 系统搭建指南》](https://learn.yuanjiemi.com/template)
+
+里面会持续更新：
+
+- 真实场景中验证过的 Agent Skills
+- n8n 工作流与配置教程
+- 视频配套资料和可下载附件
+- AI 系统搭建案例、清单和复盘方法
+
+## 🔹关于元子
+
+我在世界 500 强做了 7 年财务分析和业务控制，读完复旦 FMBA，也拿了 ACCA、CMA 和 PMP 三张证书。
+
+以前我看生意，习惯先看目标、流程、成本、结果和 ROI。现在我看 AI 工具，用的也是同一套方法：它解决什么问题？能省多少时间和成本？值不值得进入一个固定工作流长期复用？
+
+## 🔹联系元子
+
+![联系元子：微信、Line与公众号](../../assets/contact-yuanzi.png)
+
+- 全平台：`@YUAN元解密`
+- [YouTube](https://www.youtube.com/@yuanzixuejie)
+- [B站](https://space.bilibili.com/44402512)
+- [Line](https://line.me/R/ti/p/@958nmzlj?oat_content=url)
+- [添加元子微信](https://hi.yuanjiemi.com/yuan)
+- 视频号、公众号：搜索「YUAN元的进阶笔记」
