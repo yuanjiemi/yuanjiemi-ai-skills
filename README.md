@@ -95,20 +95,29 @@ WorkBuddy 官方说明：[Skills 市场与本地技能](https://www.workbuddy.cn
 ### OpenClaw（开源小龙虾）
 
 > [!IMPORTANT]
-> 下面的命令要在电脑自带的“终端 Terminal”中运行，不要发送给 OpenClaw 聊天代理执行。聊天代理可能被 `PreToolUse hook` 拦截，这不代表仓库或 Skill 有问题。
+> 下面整段命令只能粘贴到运行 OpenClaw Gateway 的电脑或服务器的**系统终端 Terminal**，不要发送给“小龙虾”聊天框。聊天代理可能被 `PreToolUse hook` 拦截，这不代表仓库或 Skill 有问题。
 
-在电脑终端中运行：
+在系统终端中一次性粘贴下面整段。它可以重复执行：仓库不存在就下载，已经存在就更新，然后强制安装最新版 Skill。
 
 ```bash
-git clone https://github.com/yuanjiemi/yuanjiemi-ai-skills.git
-openclaw skills install ./yuanjiemi-ai-skills/skills/wechat-article --as wechat-article --global
+cd "$HOME"
+if [ -d "$HOME/yuanjiemi-ai-skills/.git" ]; then
+  git -C "$HOME/yuanjiemi-ai-skills" pull
+else
+  git clone https://github.com/yuanjiemi/yuanjiemi-ai-skills.git "$HOME/yuanjiemi-ai-skills"
+fi
+openclaw skills install "$HOME/yuanjiemi-ai-skills/skills/wechat-article" --as wechat-article --global --force
 ```
+
+> [!NOTE]
+> 删除 `~/.openclaw/skills/wechat-article` 只代表删除了已安装的 Skill，不会自动删除 `$HOME/yuanjiemi-ai-skills` Git 仓库。因此重复安装时不能直接再次运行原来的 `git clone`，上面的命令会自动判断并改用 `git pull`。
 
 如果命令安装仍不可用，可以手动安装：
 
 1. 下载并解压上面的通用 Skill ZIP。
 2. 把完整的 `wechat-article` 文件夹放进 `~/.openclaw/skills/`。
-3. 新开一个 OpenClaw 会话，再发送测试指令。
+3. 确认最终文件是 `~/.openclaw/skills/wechat-article/SKILL.md`，并且 `skills` 目录中没有另一个旧版同名 Skill。
+4. 完全新开一个 OpenClaw 会话，再发送测试指令。
 
 OpenClaw 官方说明：[Skills 安装与加载目录](https://docs.openclaw.ai/tools/skills)。
 
