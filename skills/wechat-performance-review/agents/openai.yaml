@@ -1,0 +1,4 @@
+interface:
+  display_name: "公众号数据复盘"
+  short_description: "读取公众号截图或文章数据，完成互动分析并生成下一篇优化建议"
+  default_prompt: "使用 $wechat-performance-review 复盘这篇公众号文章的数据，并把结果写入本地复盘库。"
