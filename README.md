@@ -1,6 +1,6 @@
 <div align="center">
 
-# 元解密 AI Skills
+# YUAN元解密 AI Skills
 
 ### AI工具不用追，系统要搭起来。
 
