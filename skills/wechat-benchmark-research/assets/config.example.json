@@ -1,0 +1,22 @@
+{
+  "_setup": {
+    "notice": "账号采集功能使用你自己的世界树 API Key；公开 Skill 不包含元子的 Key。",
+    "official_website": "https://www.worldtreetech.cn/",
+    "api_docs": "https://s.apifox.cn/2592d2ef-25b9-4e40-b92b-c1484ee35b14",
+    "steps": [
+      "打开世界树官网，联系服务方申请并确认当前额度与计费规则。",
+      "拿到 Key 后，只在本机把它填入 worldtree.api_key，不要发送到聊天框、截图或 GitHub。",
+      "保存后回到智能体说“已经配置好”，由 Skill 检查配置是否有效。"
+    ]
+  },
+  "worldtree": {
+    "api_key": "",
+    "base_url": "https://www.worldtreetech.cn/api/v2"
+  },
+  "collection": {
+    "latest_count": 3,
+    "request_timeout_seconds": 30,
+    "output_dir": "outputs/wechat-benchmark-research"
+  },
+  "accounts": {}
+}
