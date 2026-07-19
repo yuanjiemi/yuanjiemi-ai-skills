@@ -7,7 +7,7 @@
 这里收录我在真实内容运营、个人品牌和一人公司场景中验证过的 Agent Skills。<br>
 先安装一个小 Skill 跑通，再慢慢升级成自己的 AI 工作系统。
 
-[🎁 免费领取完整 AI 系统搭建指南](https://learn.yuanjiemi.com/template) · [⬇️ 下载最新通用 Skill 包](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.3/wechat-article-skill-v1.0.3.zip)
+[🎁 免费领取完整 AI 系统搭建指南](https://learn.yuanjiemi.com/template) · [⬇️ 下载最新通用 Skill 包](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.4/wechat-article-skill-v1.0.4.zip)
 
 </div>
 
@@ -17,7 +17,7 @@
 
 | Skill | 它能帮你做什么 | 是否依赖 n8n | 状态 |
 |---|---|---|---|
-| [根据视频脚本生成公众号文案 Skill](skills/wechat-article/) | 先选 CTA，再生成标题、正文和 CTA，审核后生成排版预览 | 否 | v1.0.3 已发布 |
+| [根据视频脚本生成公众号文案 Skill](skills/wechat-article/) | 先选 CTA，再生成标题、正文和 CTA，审核后生成排版预览 | 否 | v1.0.4 已发布 |
 
 每个 Skill 都以独立目录保存，核心入口是目录中的 `SKILL.md`。安装时必须保留完整文件夹，不能只复制 `SKILL.md`，否则写作和排版标准会丢失。
 
@@ -54,7 +54,7 @@
 
 ### 通用安装包
 
-[下载最新版 `wechat-article-skill-v1.0.3.zip`](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.3/wechat-article-skill-v1.0.3.zip)
+[下载最新版 `wechat-article-skill-v1.0.4.zip`](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.4/wechat-article-skill-v1.0.4.zip)
 
 这是完整的通用 Skill 包：可以上传到 WorkBuddy，也可以解压后安装到 Claude Code、OpenClaw 或其他支持 `SKILL.md` 的智能体。
 
