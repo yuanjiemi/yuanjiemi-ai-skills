@@ -1,0 +1,30 @@
+{
+  "sheet_name": "公众号文章复盘库",
+  "dedup_key": ["原文链接", "复盘阶段"],
+  "fields": [
+    {"name": "标题", "type": "text", "rule": "原文标题；无法确认时请用户补充"},
+    {"name": "发布时间", "type": "datetime", "rule": "原文可验证的发布时间"},
+    {"name": "复盘时间", "type": "datetime", "rule": "数据截图、接口采集或手动记录的时间"},
+    {"name": "复盘阶段", "type": "choice", "values": ["第3天", "第7天", "第30天", "手动复盘"]},
+    {"name": "原文链接", "type": "url", "rule": "与复盘阶段共同作为去重键"},
+    {"name": "内容类型", "type": "choice", "values": ["认知观点", "教程干货", "案例复盘", "产品发售", "故事经历", "清单工具", "其他"]},
+    {"name": "选题类型", "type": "text", "rule": "一句话概括读者问题或内容角度"},
+    {"name": "标题结构", "type": "text", "rule": "如结果前置、痛点提问、反常识、数字清单"},
+    {"name": "CTA类型", "type": "text", "rule": "关注、加微信、领资料、预约、购买或无"},
+    {"name": "阅读量", "type": "number"},
+    {"name": "点赞数", "type": "number"},
+    {"name": "分享数", "type": "number"},
+    {"name": "爱心/在看数", "type": "number"},
+    {"name": "总互动数", "type": "formula", "formula": "点赞数+分享数+爱心/在看数"},
+    {"name": "互动率", "type": "formula", "formula": "总互动数/阅读量"},
+    {"name": "阅读表现", "type": "choice", "values": ["样本不足", "高于基准", "接近基准", "低于基准"]},
+    {"name": "互动表现", "type": "choice", "values": ["样本不足", "高于基准", "接近基准", "低于基准"]},
+    {"name": "表现亮点", "type": "text", "rule": "可验证的相对优势或值得保留的做法"},
+    {"name": "可能原因", "type": "text", "rule": "最多3条假设，每条附依据和不确定性"},
+    {"name": "下次优化动作", "type": "text", "rule": "1至3条具体可执行动作"},
+    {"name": "可复用经验", "type": "text", "rule": "提炼结构和方法，不复制原文表达"},
+    {"name": "数据来源", "type": "text", "rule": "后台截图、Excel、手动输入或世界树 API"},
+    {"name": "本地截图路径", "type": "text", "rule": "可选，仅保存用户本机路径"},
+    {"name": "入库时间", "type": "datetime"}
+  ]
+}

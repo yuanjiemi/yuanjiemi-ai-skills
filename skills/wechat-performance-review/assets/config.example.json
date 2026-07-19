@@ -1,0 +1,15 @@
+{
+  "_setup": {
+    "notice": "链接自动采集使用你自己的世界树 API Key；公开 Skill 不包含元子的 Key。",
+    "official_website": "https://www.worldtreetech.cn/",
+    "api_docs": "https://s.apifox.cn/2592d2ef-25b9-4e40-b92b-c1484ee35b14"
+  },
+  "worldtree": {
+    "api_key": "",
+    "base_url": "https://www.worldtreetech.cn/api/v2"
+  },
+  "collection": {
+    "request_timeout_seconds": 30,
+    "output_dir": "outputs/wechat-performance-review"
+  }
+}
