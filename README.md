@@ -7,7 +7,7 @@
 这里收录我在真实内容运营、个人品牌和一人公司场景中验证过的 Agent Skills。<br>
 先安装一个小 Skill 跑通，再慢慢升级成自己的 AI 工作系统。
 
-[🎁 免费领取完整 AI 系统搭建指南](https://learn.yuanjiemi.com/template) · [⬇️ 下载最新通用 Skill 包](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.4/wechat-article-skill-v1.0.4.zip)
+[🎁 免费领取完整 AI 系统搭建指南](https://learn.yuanjiemi.com/template) · [⬇️ 下载最新通用 Skill 包](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.5/wechat-article-skill-v1.0.5.zip)
 
 </div>
 
@@ -17,7 +17,7 @@
 
 | Skill | 它能帮你做什么 | 是否依赖 n8n | 状态 |
 |---|---|---|---|
-| [根据视频脚本生成公众号文案 Skill](skills/wechat-article/) | 先选 CTA，再生成标题、正文和 CTA，审核后生成排版预览 | 否 | v1.0.4 已发布 |
+| [根据视频脚本生成公众号文案 Skill](skills/wechat-article/) | 先选 CTA，再生成标题、正文和 CTA，审核后生成排版预览 | 否 | v1.0.5 已发布 |
 
 每个 Skill 都以独立目录保存，核心入口是目录中的 `SKILL.md`。安装时必须保留完整文件夹，不能只复制 `SKILL.md`，否则写作和排版标准会丢失。
 
@@ -26,6 +26,13 @@
 > 视频脚本 → 选择默认或自定义 CTA → 生成 5 个标题和正文 → 按反馈局部修改 → 生成微信公众号排版预览
 
 它适合不懂 n8n、但想先把“视频脚本转公众号文章”这个小流程跑通的人。它不会自动登录公众号、上传草稿或采集发布数据；这些功能需要使用[进阶版公众号 n8n 工作流](https://github.com/yuanjiemi/yuanjiemi-n8n-templates)。
+
+### v1.0.5 更新
+
+- 视频承接型正文默认使用更适合手机阅读的短段落。
+- 生成排版预览时保留已经审核的标题、正文和段落边界。
+- 默认 CTA 保留原有短段落，并固定扫码提示、模板库名称和预约文字的强调样式。
+- 默认领取文案统一为“添加元子微信”。
 
 ## ✅ 如何确认 Skill 已启用
 
@@ -54,7 +61,7 @@
 
 ### 通用安装包
 
-[下载最新版 `wechat-article-skill-v1.0.4.zip`](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.4/wechat-article-skill-v1.0.4.zip)
+[下载最新版 `wechat-article-skill-v1.0.5.zip`](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.5/wechat-article-skill-v1.0.5.zip)
 
 这是完整的通用 Skill 包：可以上传到 WorkBuddy，也可以解压后安装到 Claude Code、OpenClaw 或其他支持 `SKILL.md` 的智能体。
 
