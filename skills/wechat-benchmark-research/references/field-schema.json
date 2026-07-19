@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.1.0",
+  "source": "元解密飞书多维表格：公众号对标研究库",
+  "tables": [
+    {
+      "name": "公众号对标账号研究库",
+      "dedupe_key": "原文链接",
+      "fields": [
+        {"name": "标题", "type": "text", "source": "fact"},
+        {"name": "内容类型（写作任务）", "type": "multi_select", "options": ["直播引流", "工具趋势", "案例复盘", "认知观点", "商业观点", "产品发售"]},
+        {"name": "发布时间", "type": "datetime", "format": "yyyy/MM/dd HH:mm", "source": "fact"},
+        {"name": "文章预览", "type": "text", "source": "analysis"},
+        {"name": "发文形式", "type": "single_select", "options": ["纯文字文章", "图文结合文章", "贴图", "图文文章"]},
+        {"name": "是否有转化引流？", "type": "single_select", "options": ["非引流文", "引流文"]},
+        {"name": "账号名称", "type": "text", "source": "fact"},
+        {"name": "内容任务", "type": "text", "source": "analysis"},
+        {"name": "原文链接", "type": "url", "source": "fact"},
+        {"name": "来源平台", "type": "text", "source": "fact"},
+        {"name": "开头方式", "type": "text", "source": "analysis"},
+        {"name": "CTA类型", "type": "text", "source": "analysis"},
+        {"name": "封面/截图（备用）", "type": "attachment", "source": "fact"},
+        {"name": "字数", "type": "number", "format": "0.0", "source": "fact"},
+        {"name": "段落数", "type": "number", "format": "0.0", "source": "fact"},
+        {"name": "研究摘要", "type": "text", "source": "analysis"},
+        {"name": "可借鉴点", "type": "text", "source": "analysis"},
+        {"name": "开头摘录（短）", "type": "text", "source": "fact"},
+        {"name": "本地样本路径", "type": "text", "source": "system"},
+        {"name": "入库时间", "type": "datetime", "format": "yyyy/MM/dd HH:mm", "source": "system"},
+        {"name": "版权说明", "type": "text", "source": "system"}
+      ]
+    },
+    {
+      "name": "公众号对标源库",
+      "fields": [
+        {"name": "账号名称", "type": "text"},
+        {"name": "入口链接", "type": "url"},
+        {"name": "启用状态", "type": "checkbox"},
+        {"name": "添加时间", "type": "datetime", "format": "yyyy/MM/dd HH:mm"},
+        {"name": "最近抓取时间", "type": "datetime", "format": "yyyy/MM/dd HH:mm"},
+        {"name": "抓取备注", "type": "text"}
+      ]
+    }
+  ]
+}

@@ -18,8 +18,61 @@
 | Skill | 它能帮你做什么 | 是否依赖 n8n | 状态 |
 |---|---|---|---|
 | [根据视频脚本生成公众号文案 Skill](skills/wechat-article/) | 先选 CTA，再生成标题、正文和 CTA，审核后生成排版预览 | 否 | v1.0.5 已发布 |
+| [公众号对标文章采集与分析 Skill](skills/wechat-benchmark-research/) | 单篇文章直接拆解；配置世界树 API 后，可采集指定账号最新 3 篇并批量写入本地 Excel | 否 | v1.0.0 已发布 |
 
 每个 Skill 都以独立目录保存，核心入口是目录中的 `SKILL.md`。安装时必须保留完整文件夹，不能只复制 `SKILL.md`，否则写作和排版标准会丢失。
+
+### 公众号对标文章采集与分析 Skill
+
+> 指定对标账号 → 采集最新 3 篇 → 按原表 21 个字段拆解 → 原文链接去重 → 保存本地 Excel → 生成选题
+
+这个 Skill 不依赖 n8n，也不要求飞书 App ID 或机器人。它有两种模式：
+
+- 模板字段与元解密现有飞书多维表格保持一致：研究库 21 个字段、对标源库 6 个字段。
+- **单篇免费模式**：用户发送文章链接、正文或截图即可拆解，不需要配置 API。
+- **账号采集模式**：用户在自己电脑的私有配置文件中填写世界树 API Key；每个新账号首次提供任意一篇文章链接，以后只需说“采集这个账号最新 3 篇”。
+- API Key 不进入 GitHub、Excel 或聊天记录；实际配置默认保存在用户自己的系统配置目录。
+- 需要云端查看时，可把生成的 Excel 手动导入飞书、Notion 或 Google Sheets。
+- 当前版不执行定时采集，不自动登录或发布公众号文章。
+
+[下载公众号对标研究库 Excel 模板](skills/wechat-benchmark-research/assets/公众号对标灵感库模板.xlsx)
+
+#### 第一次使用：申请自己的世界树 API Key
+
+> [!IMPORTANT]
+> 公开 Skill 不包含、也不会共用元子的世界树 Key。只有“按账号采集最新 3 篇”需要第三方 API；单篇文章拆解不需要 Key。
+
+1. 打开[世界树官网](https://www.worldtreetech.cn/)，联系服务方申请自己的 API Key，并确认当前额度和计费规则。
+2. 安装 Skill 后第一次运行账号采集，它会自动创建本机私有配置，并显示具体文件位置。
+3. 用户只在自己电脑的配置文件中填写 Key，然后回复“已经配置好”。不要把 Key 发进聊天框、截图或 GitHub。
+4. 暂时不想申请 Key，可以直接提供单篇文章正文、完整截图或可访问链接，继续使用免费拆解与 Excel 入库功能。
+
+[查看世界树接口文档](https://s.apifox.cn/2592d2ef-25b9-4e40-b92b-c1484ee35b14)
+
+#### 安装与测试
+
+[下载完整通用 Skill 包](https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/wechat-benchmark-v1.0.0/wechat-benchmark-research-skill-v1.0.0.zip)
+
+在 Codex 中直接发送：
+
+```text
+请用 $skill-installer 安装这个 Skill：
+https://github.com/yuanjiemi/yuanjiemi-ai-skills/tree/main/skills/wechat-benchmark-research
+```
+
+安装后新建任务，可以这样测试：
+
+```text
+采集“公众号名称”最新3篇文章并收进对标研究库
+```
+
+正常情况下，第一行会显示：
+
+```text
+已启用「公众号对标文章采集与分析 Skill」
+```
+
+其他支持 `SKILL.md` 的智能体，可下载通用 ZIP，并把完整的 `wechat-benchmark-research` 文件夹安装到其 Skills 目录。安装时不能只复制 `SKILL.md`，否则配置脚本和 Excel 模板会缺失。
 
 ## ✨ 它是怎么工作的？
 
