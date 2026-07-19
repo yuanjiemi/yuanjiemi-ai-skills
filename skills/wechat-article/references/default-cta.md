@@ -26,11 +26,13 @@ https://calendly.com/lid442655/30min
 
 ## 图片说明
 
-在排版预览中保留以下明确占位，不生成或伪造二维码：
+公开 CTA 图片：
 
-`[插入元子的“扫码领取模板库”公开 CTA 图片]`
+https://github.com/yuanjiemi/yuanjiemi-ai-skills/releases/download/v1.0.3/yuanzi-ai-template-library-cta.png
 
-如果用户在当前对话中提供了真实 CTA 图片，则用真实图片替换占位。
+选择默认 CTA 并生成排版预览时，使用这张公开图片。不要识别、重绘或改造其中的二维码。如果当前环境无法下载或嵌入远程图片，保留图片链接并显示 `[插入元子的“扫码领取模板库”公开 CTA 图片]`，不要伪造替代二维码。
+
+如果用户在当前对话中提供了自己的真实 CTA 图片，则优先使用用户提供的图片。
 
 ## 安全边界
 
