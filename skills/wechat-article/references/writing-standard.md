@@ -45,7 +45,7 @@
 
 ```json
 {
-  "stage": "title_selection | draft | formatted",
+  "stage": "cta_selection | draft_review | formatted",
   "mode": "video_companion | full_article | revision",
   "title_options": ["标题1", "标题2", "标题3", "标题4", "标题5"],
   "selected_title": "推荐或固定标题",
